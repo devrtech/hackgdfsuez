@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mon compte avec tte mes infos qui viennent de salesforce" />
+
+    <!-- 
+    
+    mon numero de compte.
+    ma derniere facture : consommation / tarif.
+        
+     -->
+    
+</LinearLayout>

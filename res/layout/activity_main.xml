@@ -44,7 +44,7 @@
 
         <LinearLayout
             style="@style/layout.menu.row"
-            android:onClick="onClickCameraActivity" >
+            android:onClick="onClickMonQuartier" >
 
             <ImageView
                 style="@style/icon"
@@ -57,7 +57,7 @@
 
         <LinearLayout
             style="@style/layout.menu.row"
-            android:onClick="onClickCameraActivity" >
+            android:onClick="onClickPromo" >
 
             <ImageView
                 style="@style/icon"
@@ -70,7 +70,7 @@
 
         <LinearLayout
             style="@style/layout.menu.row"
-            android:onClick="onClickCameraActivity" >
+            android:onClick="onClickMonCompte" >
 
             <ImageView
                 style="@style/icon"

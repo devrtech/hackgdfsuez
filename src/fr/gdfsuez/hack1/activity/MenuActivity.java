@@ -2,6 +2,9 @@ package fr.gdfsuez.hack1.activity;
 
 import fr.gdfsuez.hack1.R;
 import fr.gdfsuez.hack1.fragment.ListingObjectsFragment;
+import fr.gdfsuez.hack1.fragment.MonCompteFragment;
+import fr.gdfsuez.hack1.fragment.MonQuartierFragment;
+import fr.gdfsuez.hack1.fragment.PromoFragment;
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -28,7 +31,7 @@ abstract public class MenuActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// DÃ©finition du background de l'actionbar
+		// Définition du background de l'actionbar
 		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_background));
 		defineLayout();
 		leftview = (View) findViewById(R.id.menu_left);
@@ -36,13 +39,13 @@ abstract public class MenuActivity extends Activity {
 		menutoggle = new ActionBarDrawerToggle(this, menulayout, R.drawable.ic_launcher, R.string.menu_open,
 				R.string.menu_close) {
 
-			// ExÃ©cutÃ©e Ã  la fermeture du menu
+			// Exécutée à la fermeture du menu
 			public void onDrawerClosed(View view) {
 				getActionBar().setTitle(R.string.app_name);
 				invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
 			}
 
-			// ExÃ©cutÃ©e Ã  lâ€™ouverture du menu
+			// Exécutée à l’ouverture du menu
 			public void onDrawerOpened(View drawerView) {
 				getActionBar().setTitle(R.string.menu);
 				invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
@@ -115,9 +118,7 @@ abstract public class MenuActivity extends Activity {
 			ft.replace(R.id.container, fragment);
 			ft.commit();
 		}
-
 	}
-
 	/* *** HANDLERS *** */
 
 	public void onClickListingObjectsActivity(View view) {
@@ -131,6 +132,36 @@ abstract public class MenuActivity extends Activity {
 	public void onClickCameraActivity(View view) {
 		Intent intent = new Intent(this, ScanObjectsActivity.class);
 		startActivityForResult(intent, ScanObjectsActivity.SCAN_COMPLETED_REQUESTCODE);
+	}
+	
+	public void onClickMonQuartier(View view) {
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+
+		MonQuartierFragment fragment = new MonQuartierFragment();
+		ft.replace(R.id.container, fragment);
+		ft.commit();
+		menulayout.closeDrawer(leftview);
+	}
+
+	public void onClickMonCompte(View view) {
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+
+		MonCompteFragment fragment = new MonCompteFragment();
+		ft.replace(R.id.container, fragment);
+		ft.commit();
+		menulayout.closeDrawer(leftview);
+	}
+
+	public void onClickPromo(View view) {
+		FragmentManager fm = getFragmentManager();
+		FragmentTransaction ft = fm.beginTransaction();
+
+		PromoFragment fragment = new PromoFragment();
+		ft.replace(R.id.container, fragment);
+		ft.commit();
+		menulayout.closeDrawer(leftview);
 	}
 
 }
