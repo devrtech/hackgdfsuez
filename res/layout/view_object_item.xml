@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layout.horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        style="@style/picture"
+        android:src="@drawable/picture_item" />
+
+    <LinearLayout style="@style/layout.vertical" >
+
+        <TextView
+            android:id="@+id/text_name"
+            style="@style/text" />
+
+        <TextView
+            android:id="@+id/text_model"
+            style="@style/text" />
+
+        <LinearLayout style="@style/layout.horizontal" >
+
+            <TextView
+                android:id="@+id/text_theorical"
+                style="@style/text" />
+
+            <TextView
+                style="@style/text"
+                android:text="@string/consumption_unity" />
+
+            <TextView
+                android:id="@+id/text_estimated"
+                style="@style/text"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_status"
+                style="@style/text"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

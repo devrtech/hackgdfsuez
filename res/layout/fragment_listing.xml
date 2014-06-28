@@ -6,13 +6,11 @@
 
     <TextView
         android:id="@+id/text_equipment"
-        style="@style/text.display"
-        android:text="@string/consumption_estimation" />
+        style="@style/text.display" />
 
     <TextView
         android:id="@+id/text_average"
-        style="@style/text.display"
-        android:text="@string/consumption_realtime" />
+        style="@style/text.display" />
 
     <ListView
         android:id="@+id/list_objects"
