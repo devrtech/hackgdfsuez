@@ -1,0 +1,40 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="fr.gdfsuez.hack1.activity.HomeActivity"
+        tools:ignore="MergeRootFrame" />
+
+    <LinearLayout
+        android:id="@+id/menu_left"
+        style="@style/layout.vertical"
+        android:layout_width="240dp"
+        android:layout_gravity="start"
+        android:background="#FFFFFF" >
+
+        <LinearLayout
+            style="@style/layout.horizontal"
+            android:onClick="onClickListingObjectsActivity" >
+
+            <TextView
+                style="@style/text.menu"
+                android:text="@string/activity_listing" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout.horizontal"
+            android:onClick="onClickCameraActivity" >
+
+            <TextView
+                style="@style/text.menu"
+                android:text="@string/activity_tracking" />
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

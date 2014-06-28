@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.gdfsuez.hack1.activity.ScanObjectsActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <fr.gdfsuez.hack1.view.CameraSurfaceView
+        android:id="@+id/surface_camera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        style="@style/layout.vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:padding="20dp" >
+
+        <LinearLayout style="@style/layout.horizontal" >
+
+            <TextView
+                style="@style/text.display"
+                android:text="@string/consumption_estimation" />
+
+            <TextView
+                android:id="@+id/text_estimation"
+                style="@style/text.display" />
+
+            <TextView
+                style="@style/text.display"
+                android:text="@string/consumption_unity" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/layout.horizontal" >
+
+            <TextView
+                style="@style/text.display"
+                android:text="@string/consumption_realtime" />
+
+            <TextView
+                android:id="@+id/text_real"
+                style="@style/text.display" />
+
+            <TextView
+                style="@style/text.display"
+                android:text="@string/consumption_unity" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        style="@style/button"
+        android:onClick="onClickScanActivity"
+        android:text="@string/scan"
+        android:padding="20dp"
+        android:layout_margin="10dp"
+        android:textColor="#FF0000"
+        android:textSize="25sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+         />
+
+</RelativeLayout>

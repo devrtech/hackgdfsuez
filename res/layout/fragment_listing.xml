@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/layout.horizontal" >
+
+        <TextView
+            style="@style/text.display"
+            android:text="@string/consumption_estimation" />
+
+        <TextView
+            android:id="@+id/text_estimation"
+            style="@style/text.display" />
+
+        <TextView
+            style="@style/text.display"
+            android:text="@string/consumption_unity" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/layout.horizontal" >
+
+        <TextView
+            style="@style/text.display"
+            android:text="@string/consumption_realtime" />
+
+        <TextView
+            android:id="@+id/text_real"
+            style="@style/text.display" />
+
+        <TextView
+            style="@style/text.display"
+            android:text="@string/consumption_unity" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_objects"
+        style="@style/layout" />
+
+    <TextView
+        android:id="@+id/text_listing"
+        style="@style/text" />
+
+</LinearLayout>
