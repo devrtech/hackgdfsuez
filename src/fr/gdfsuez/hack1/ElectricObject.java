@@ -8,14 +8,19 @@ package fr.gdfsuez.hack1;
  */
 public class ElectricObject implements Comparable<ElectricObject> {
 
+	// Statuts
+	static final public int STATUS_OFF = 0;
+	static final public int STATUS_ON = 1;
+	static final public int STATUS_SLEEP = 2;
+
 	// Nom de l'objet
 	private String name;
 
 	// Consommation électrique
-	private int estimatedconsumption;
+	private int theoricalconsumption;
 
 	// Consommation réelle (watts)
-	private int realconsumption;
+	private int estimatedconsumption;
 
 	// Status OFF / ON / Veille -> 0 = OFF / 1 = ON / 2 = VEILLE
 	private int status;
@@ -24,7 +29,7 @@ public class ElectricObject implements Comparable<ElectricObject> {
 	 * Constructeur
 	 */
 	public ElectricObject(String name, int estimatedconsumption, int realconsumption, boolean status) {
-		this(name, estimatedconsumption, realconsumption, status ? 1 : 0);
+		this(name, estimatedconsumption, realconsumption, status ? STATUS_ON : STATUS_OFF);
 	}
 
 	/**
@@ -33,8 +38,8 @@ public class ElectricObject implements Comparable<ElectricObject> {
 	public ElectricObject(String name, int estimatedconsumption, int realconsumption, int status) {
 		super();
 		this.name = name;
-		this.estimatedconsumption = estimatedconsumption;
-		this.realconsumption = realconsumption;
+		this.theoricalconsumption = estimatedconsumption;
+		this.estimatedconsumption = realconsumption;
 		this.status = status;
 	}
 
@@ -48,8 +53,8 @@ public class ElectricObject implements Comparable<ElectricObject> {
 
 	@Override
 	public String toString() {
-		return this.name + "  " + estimatedconsumption + "W " + realconsumption + "W "
-				+ (status == 0 ? "OFF" : (status == 1 ? "ON" : "Veille"));
+		return this.name + "  " + theoricalconsumption + "W " + estimatedconsumption + "W "
+				+ getStatusString();
 	}
 
 	/* *** GETTERS AND SETTERS *** */
@@ -58,32 +63,45 @@ public class ElectricObject implements Comparable<ElectricObject> {
 		return name;
 	}
 
-	public int getEstimatedconsumption() {
-		return estimatedconsumption;
-	}
-
-	public int getRealconsumption() {
-		return realconsumption;
+	public int getEstimatedConsumption() {
+		return theoricalconsumption;
 	}
 
 	public boolean isOFF() {
-		return status == 0;
+		return status == STATUS_OFF;
 	}
 
 	public boolean isON() {
 		return status == 1;
 	}
 
+	public int getStatus() {
+		return status;
+	}
+
+	public String getStatusString() {
+		if (status <= STATUS_OFF) {
+			return "OFF";
+		} else if (status == STATUS_ON) {
+			return "ON";
+		}
+		return "Veille";
+	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public void setEstimatedconsumption(int estimatedconsumption) {
-		this.estimatedconsumption = estimatedconsumption;
+	public int getTheoricalConsumption() {
+		return theoricalconsumption;
 	}
 
-	public void setRealconsumption(int realconsumption) {
-		this.realconsumption = realconsumption;
+	public void setTheoricalConsumption(int theoricalconsumption) {
+		this.theoricalconsumption = theoricalconsumption;
+	}
+
+	public void setEstimatedConsumption(int estimatedconsumption) {
+		this.estimatedconsumption = estimatedconsumption;
 	}
 
 	public void setStatus(int status) {
