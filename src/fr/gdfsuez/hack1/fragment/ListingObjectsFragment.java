@@ -49,19 +49,14 @@ public class ListingObjectsFragment extends Fragment {
 	public void onResume() {
 		super.onResume();
 		objectslistview.setAdapter(new ObjectAdapter(getView().getContext()));
-
 		List<ElectricObject> list = GDFSuezApplication.getAppInstance().getObjects();
 		int c = 0;
 		for (ElectricObject object : list) {
 			c += object.getTheoricalConsumption();
 		}
-		
 		Random random = new Random();
-//		int r = random
-//				
-//		c
-		
-
+		int r = Math.abs(random.nextInt() % 110);
+		c = (int) ((float) c * ((float) r / 1000F));
 		eq_textview.setText(getResources().getString(R.string.consumption_estimation, c));
 	}
 

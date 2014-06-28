@@ -1,7 +1,6 @@
 package fr.gdfsuez.hack1.activity;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -40,7 +39,7 @@ public class ScanObjectsActivity extends Activity {
 		setContentView(R.layout.activity_tracking);
 		// On extrait les widgets
 		photo_surfaceview = (CameraSurfaceView) findViewById(R.id.surface_camera);
-		//estimationtextview = (TextView) findViewById(R.id.text_estimation);
+		// estimationtextview = (TextView) findViewById(R.id.text_estimation);
 		realtextview = (TextView) findViewById(R.id.text_real);
 		// Utilisation de la camera arrière
 		cameraid = Utils.getBackCameraId();
@@ -52,7 +51,7 @@ public class ScanObjectsActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 
-		int e = GDFSuezApplication.getAppInstance().getEstimatedConsumption();
+		// int e = GDFSuezApplication.getAppInstance().getEstimatedConsumption();
 		int r = GDFSuezApplication.getAppInstance().getRealTimeConsumption();
 
 		// estimationtextview.setText("" + e);
@@ -64,9 +63,6 @@ public class ScanObjectsActivity extends Activity {
 
 	public void onClickScanActivity(View view) {
 		this.finish();
-
-		// Intent intent = new Intent(this, ListingObjectsActivity.class);
-		// startActivity(intent);
 	}
 
 }
