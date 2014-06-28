@@ -28,25 +28,23 @@ abstract public class MenuActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		// Définition du background de l'actionbar
+		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_background));
 		defineLayout();
-
 		leftview = (View) findViewById(R.id.menu_left);
-
 		menulayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-
 		menutoggle = new ActionBarDrawerToggle(this, menulayout, R.drawable.ic_launcher, R.string.menu_open,
 				R.string.menu_close) {
 
 			// Exécutée à la fermeture du menu
 			public void onDrawerClosed(View view) {
-				getActionBar().setTitle(R.string.menu);
+				getActionBar().setTitle(R.string.app_name);
 				invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
 			}
 
 			// Exécutée à l’ouverture du menu
 			public void onDrawerOpened(View drawerView) {
-				getActionBar().setTitle("fffqdffs");
+				getActionBar().setTitle(R.string.menu);
 				invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
 			}
 		};

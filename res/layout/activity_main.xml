@@ -13,27 +13,72 @@
 
     <LinearLayout
         android:id="@+id/menu_left"
-        style="@style/layout.vertical"
-        android:layout_width="240dp"
-        android:layout_gravity="start"
-        android:background="#FFFFFF" >
+        style="@style/layout.menu.left"
+        android:padding="@dimen/menu_padding" >
 
         <LinearLayout
-            style="@style/layout.horizontal"
-            android:onClick="onClickListingObjectsActivity" >
+            style="@style/layout.menu.row"
+            android:onClick="onClickCameraActivity" >
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/icon_voisinage" />
 
             <TextView
                 style="@style/text.menu"
-                android:text="@string/activity_listing" />
+                android:text="@string/menu_scanner" />
         </LinearLayout>
 
         <LinearLayout
-            style="@style/layout.horizontal"
-            android:onClick="onClickCameraActivity" >
+            style="@style/layout.menu.row"
+            android:onClick="onClickListingObjectsActivity" >
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/icon_voisinage" />
 
             <TextView
                 style="@style/text.menu"
-                android:text="@string/activity_tracking" />
+                android:text="@string/menu_mesequipements" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout.menu.row"
+            android:onClick="onClickCameraActivity" >
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/icon_voisinage" />
+
+            <TextView
+                style="@style/text.menu"
+                android:text="@string/menu_monquartier" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout.menu.row"
+            android:onClick="onClickCameraActivity" >
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/icon_voisinage" />
+
+            <TextView
+                style="@style/text.menu"
+                android:text="@string/menu_promo" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout.menu.row"
+            android:onClick="onClickCameraActivity" >
+
+            <ImageView
+                style="@style/icon"
+                android:src="@drawable/icon_voisinage" />
+
+            <TextView
+                style="@style/text.menu"
+                android:text="@string/menu_moncompte" />
         </LinearLayout>
     </LinearLayout>
 

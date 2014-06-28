@@ -73,22 +73,23 @@ public class GDFSuezApplication extends Application {
 		estimatedconsumption = (int) ((float) realtimeconsumption * 1.1F);
 
 		boolean b1 = random.nextBoolean();
-		objects.add(new ElectricObject("Ordinateur", 500, (b1) ? random.nextInt() % 500 : 0, b1));
+		objects.add(new ElectricObject("Ordinateur", "Acer Aspire Z3", 500,
+				(b1) ? random.nextInt() % 500 : 0, b1));
 
 		boolean b2 = random.nextBoolean();
-		objects.add(new ElectricObject("Lampe 1", 60, (b2) ? 60 : 0, b2));
+		objects.add(new ElectricObject("Lampe", "Ikea BASISK Rail plafond", 60, (b2) ? 60 : 0, b2));
 
 		boolean b3 = random.nextBoolean();
-		objects.add(new ElectricObject("Lampe 2", 90, (b3) ? 90 : 0, b3));
+		objects.add(new ElectricObject("Lampadaire", "Ikea ALÄNG", 90, (b3) ? 90 : 0, b3));
 
 		boolean b4 = random.nextBoolean();
-		objects.add(new ElectricObject("TV", 200, (b4) ? 200 : 8, b4 ? 1 : 2));
+		objects.add(new ElectricObject("Téléviseur", "Sony Bravia X9500B", 200, (b4) ? 200 : 8, b4 ? 1 : 2));
 
 		boolean b5 = random.nextBoolean();
-		objects.add(new ElectricObject("Lave-Linge", 800, (b5) ? 800 : 0, b5));
+		objects.add(new ElectricObject("Lave-Linge", "Whirlpool AWG712D", 800, (b5) ? 800 : 0, b5));
 
 		boolean b6 = random.nextBoolean();
-		objects.add(new ElectricObject("Lampe 3", 120, (b6) ? 120 : 5, b6 ? 1 : 2));
+		objects.add(new ElectricObject("Lampe", "Ikea HEKTAR Suspension", 120, (b6) ? 120 : 5, b6 ? 1 : 2));
 
 	}
 

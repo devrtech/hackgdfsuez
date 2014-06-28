@@ -31,6 +31,8 @@ public class ScanObjectsActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		// Définition du background de l'actionbar
+		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_background));
 		// Création de la View
 		setContentView(R.layout.activity_tracking);
 		// On extrait les widgets

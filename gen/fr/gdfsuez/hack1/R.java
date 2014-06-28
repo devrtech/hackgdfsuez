@@ -15,6 +15,8 @@ public final class R {
         public static final int black=0x7f04000f;
         public static final int blue=0x7f04000d;
         public static final int fuchsia=0x7f040002;
+        public static final int gdf_blue=0x7f040011;
+        public static final int gdf_gray=0x7f040010;
         public static final int gray=0x7f040005;
         public static final int green=0x7f04000c;
         public static final int lime=0x7f04000a;
@@ -38,26 +40,31 @@ public final class R {
          */
         public static final int activity_horizontal_margin=0x7f050000;
         public static final int activity_vertical_margin=0x7f050001;
+        public static final int menu_padding=0x7f050002;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int actionbar_background=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int icon_voisinage=0x7f020002;
+        public static final int picture_item=0x7f020003;
     }
     public static final class id {
-        public static final int action_close=0x7f09000d;
-        public static final int action_open=0x7f09000c;
-        public static final int action_settings=0x7f09000e;
+        public static final int action_close=0x7f09000e;
+        public static final int action_open=0x7f09000d;
+        public static final int action_settings=0x7f09000f;
         public static final int container=0x7f090000;
         public static final int drawer_layout=0x7f090004;
         public static final int list_objects=0x7f090007;
         public static final int menu_left=0x7f090005;
         public static final int surface_camera=0x7f090006;
-        public static final int text_estimated=0x7f09000a;
+        public static final int text_estimated=0x7f09000b;
         public static final int text_estimation=0x7f090002;
         public static final int text_listing=0x7f090001;
+        public static final int text_model=0x7f090009;
         public static final int text_name=0x7f090008;
         public static final int text_real=0x7f090003;
-        public static final int text_status=0x7f09000b;
-        public static final int text_theorical=0x7f090009;
+        public static final int text_status=0x7f09000c;
+        public static final int text_theorical=0x7f09000a;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
@@ -82,9 +89,14 @@ public final class R {
         public static final int consumption_unity=0x7f060007;
         public static final int hello_world=0x7f060001;
         public static final int menu=0x7f060008;
-        public static final int menu_close=0x7f06000a;
-        public static final int menu_open=0x7f060009;
-        public static final int scan=0x7f06000b;
+        public static final int menu_close=0x7f06000f;
+        public static final int menu_mesequipements=0x7f06000a;
+        public static final int menu_moncompte=0x7f06000d;
+        public static final int menu_monquartier=0x7f06000b;
+        public static final int menu_open=0x7f06000e;
+        public static final int menu_promo=0x7f06000c;
+        public static final int menu_scanner=0x7f060009;
+        public static final int scan=0x7f060010;
     }
     public static final class style {
         /** 
@@ -113,15 +125,20 @@ public final class R {
  All customizations that are NOT specific to a particular API-level can go here. 
          */
         public static final int AppTheme=0x7f070001;
-        public static final int button=0x7f070003;
-        public static final int button_home=0x7f070004;
-        public static final int layout=0x7f070008;
-        public static final int layout_horizontal=0x7f07000a;
-        public static final int layout_match=0x7f07000b;
-        public static final int layout_vertical=0x7f070009;
-        public static final int text=0x7f070005;
-        public static final int text_display=0x7f070007;
-        public static final int text_menu=0x7f070006;
+        public static final int button=0x7f070008;
+        public static final int button_home=0x7f070009;
+        public static final int icon=0x7f070006;
+        public static final int layout=0x7f07000a;
+        public static final int layout_horizontal=0x7f07000c;
+        public static final int layout_match=0x7f07000d;
+        public static final int layout_match_vertical=0x7f07000e;
+        public static final int layout_menu_left=0x7f07000f;
+        public static final int layout_menu_row=0x7f070010;
+        public static final int layout_vertical=0x7f07000b;
+        public static final int picture=0x7f070007;
+        public static final int text=0x7f070003;
+        public static final int text_display=0x7f070005;
+        public static final int text_menu=0x7f070004;
         public static final int wrap=0x7f070002;
     }
 }

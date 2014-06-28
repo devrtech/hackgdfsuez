@@ -10,6 +10,11 @@
     <string name="consumption_realtime">Temps réel</string>
     <string name="consumption_unity"> Wh</string>
     <string name="menu">Menu</string>
+    <string name="menu_scanner">Scanner</string>
+    <string name="menu_mesequipements">Mes Equipements</string>
+    <string name="menu_monquartier">Mon Quartier</string>
+    <string name="menu_promo">Promo</string>
+    <string name="menu_moncompte">Mon Compte</string>
     <string name="menu_open">Ouvrir Menu</string>
     <string name="menu_close">Fermer Menu</string>
     <string name="scan">Scan</string>

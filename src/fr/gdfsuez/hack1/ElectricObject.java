@@ -16,6 +16,9 @@ public class ElectricObject implements Comparable<ElectricObject> {
 	// Nom de l'objet
 	private String name;
 
+	// Marque - Modèle de l'objet
+	private String model;
+
 	// Consommation électrique
 	private int theoricalconsumption;
 
@@ -28,16 +31,18 @@ public class ElectricObject implements Comparable<ElectricObject> {
 	/**
 	 * Constructeur
 	 */
-	public ElectricObject(String name, int estimatedconsumption, int realconsumption, boolean status) {
-		this(name, estimatedconsumption, realconsumption, status ? STATUS_ON : STATUS_OFF);
+	public ElectricObject(String name, String model, int estimatedconsumption, int realconsumption,
+			boolean status) {
+		this(name, model, estimatedconsumption, realconsumption, status ? STATUS_ON : STATUS_OFF);
 	}
 
 	/**
 	 * Constructeur
 	 */
-	public ElectricObject(String name, int estimatedconsumption, int realconsumption, int status) {
+	public ElectricObject(String name, String model, int estimatedconsumption, int realconsumption, int status) {
 		super();
 		this.name = name;
+		this.model = model;
 		this.theoricalconsumption = estimatedconsumption;
 		this.estimatedconsumption = realconsumption;
 		this.status = status;
@@ -106,6 +111,14 @@ public class ElectricObject implements Comparable<ElectricObject> {
 
 	public void setStatus(int status) {
 		this.status = status;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
 	}
 
 }
