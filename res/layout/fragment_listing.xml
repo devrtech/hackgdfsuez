@@ -4,35 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout style="@style/layout.horizontal" >
+    <TextView
+        android:id="@+id/text_equipment"
+        style="@style/text.display"
+        android:text="@string/consumption_estimation" />
 
-        <TextView
-            style="@style/text.display"
-            android:text="@string/consumption_estimation" />
-
-        <TextView
-            android:id="@+id/text_estimation"
-            style="@style/text.display" />
-
-        <TextView
-            style="@style/text.display"
-            android:text="@string/consumption_unity" />
-    </LinearLayout>
-
-    <LinearLayout style="@style/layout.horizontal" >
-
-        <TextView
-            style="@style/text.display"
-            android:text="@string/consumption_realtime" />
-
-        <TextView
-            android:id="@+id/text_real"
-            style="@style/text.display" />
-
-        <TextView
-            style="@style/text.display"
-            android:text="@string/consumption_unity" />
-    </LinearLayout>
+    <TextView
+        android:id="@+id/text_average"
+        style="@style/text.display"
+        android:text="@string/consumption_realtime" />
 
     <ListView
         android:id="@+id/list_objects"

@@ -80,14 +80,42 @@ abstract public class MenuActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
 		// Pass the event to ActionBarDrawerToggle, if it returns
 		// true, then it has handled the app icon touch event
 		if (menutoggle.onOptionsItemSelected(item)) {
 			return true;
 		}
+		if (id == R.id.action_open) {
+			return true;
+		}
+		if (id == R.id.action_close) {
+			return true;
+		}
+
 		// Handle your other action bar items...
 
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		if (requestCode == ScanObjectsActivity.SCAN_COMPLETED_REQUESTCODE) {
+			FragmentManager fm = getFragmentManager();
+			FragmentTransaction ft = fm.beginTransaction();
+			ListingObjectsFragment fragment = new ListingObjectsFragment();
+			ft.replace(R.id.container, fragment);
+			ft.commit();
+		}
+
 	}
 
 	/* *** HANDLERS *** */
@@ -95,16 +123,14 @@ abstract public class MenuActivity extends Activity {
 	public void onClickListingObjectsActivity(View view) {
 		FragmentManager fm = getFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
-
 		ListingObjectsFragment fragment = new ListingObjectsFragment();
 		ft.replace(R.id.container, fragment);
 		ft.commit();
-
 	}
 
 	public void onClickCameraActivity(View view) {
 		Intent intent = new Intent(this, ScanObjectsActivity.class);
-		startActivity(intent);
+		startActivityForResult(intent, ScanObjectsActivity.SCAN_COMPLETED_REQUESTCODE);
 	}
 
 }

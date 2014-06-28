@@ -18,6 +18,9 @@ import fr.gdfsuez.hack1.view.CameraSurfaceView;
  */
 public class ScanObjectsActivity extends Activity {
 
+	// RequestCode pour finish
+	static final public int SCAN_COMPLETED_REQUESTCODE = 1;
+
 	// SurfaceView d'affichage de preview
 	protected CameraSurfaceView photo_surfaceview;
 
@@ -37,7 +40,7 @@ public class ScanObjectsActivity extends Activity {
 		setContentView(R.layout.activity_tracking);
 		// On extrait les widgets
 		photo_surfaceview = (CameraSurfaceView) findViewById(R.id.surface_camera);
-		estimationtextview = (TextView) findViewById(R.id.text_estimation);
+		//estimationtextview = (TextView) findViewById(R.id.text_estimation);
 		realtextview = (TextView) findViewById(R.id.text_real);
 		// Utilisation de la camera arrière
 		cameraid = Utils.getBackCameraId();
@@ -52,32 +55,18 @@ public class ScanObjectsActivity extends Activity {
 		int e = GDFSuezApplication.getAppInstance().getEstimatedConsumption();
 		int r = GDFSuezApplication.getAppInstance().getRealTimeConsumption();
 
-		estimationtextview.setText("" + e);
-		realtextview.setText("" + r);
+		// estimationtextview.setText("" + e);
+		realtextview.setText(getResources().getString(R.string.consumption_realtime, r));
 
-		// On stoppe la camera
-		// GDFSuezApplication.stopCamera();
-		// On initilise la novelle camera
-		// GDFSuezApplication.initCamera(cameraid, photo_surfaceview.getWidth(),
-		// photo_surfaceview.getHeight());
-		// On démarre la camera
-		// GDFSuezApplication.startCamera(photo_surfaceview.getHolder(), photo_surfaceview);
-
-	}
-
-	@Override
-	protected void onPause() {
-		super.onPause();
-		// On stoppe la camera
-		// GDFSuezApplication.stopCamera();
 	}
 
 	/* *** HANDLERS *** */
 
 	public void onClickScanActivity(View view) {
-		Intent intent = new Intent(this, ListingObjectsActivity.class);
-		// Intent intent = new Intent(this, ScannedObjectsActivity.class);
-		startActivity(intent);
+		this.finish();
+
+		// Intent intent = new Intent(this, ListingObjectsActivity.class);
+		// startActivity(intent);
 	}
 
 }

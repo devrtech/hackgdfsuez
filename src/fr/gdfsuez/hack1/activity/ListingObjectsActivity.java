@@ -1,51 +1,46 @@
 package fr.gdfsuez.hack1.activity;
 
-import java.util.List;
-
-import fr.gdfsuez.hack1.ElectricObject;
-import fr.gdfsuez.hack1.GDFSuezApplication;
 import fr.gdfsuez.hack1.R;
+import fr.gdfsuez.hack1.fragment.ListingObjectsFragment;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.Menu;
+import android.view.MenuItem;
 
 public class ListingObjectsActivity extends MenuActivity {
-
-	// Affichage des consommations
-	protected TextView estimationtextview;
-	protected TextView realtextview;
-	private TextView tvlisting;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
-		// Extraction des widgets
-		tvlisting = (TextView) findViewById(R.id.text_listing);
-		estimationtextview = (TextView) findViewById(R.id.text_estimation);
-		realtextview = (TextView) findViewById(R.id.text_real);
+		if (savedInstanceState == null) {
+			getFragmentManager().beginTransaction().add(R.id.container, new ListingObjectsFragment())
+					.commit();
+		}
 	}
 
 	@Override
 	protected void defineLayout() {
-		// TODO Auto-generated method stub
-		setContentView(R.layout.activity_listing);
+		// setContentView(R.layout.activity_home);
+		setContentView(R.layout.activity_main);
 	}
 
 	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-		List<ElectricObject> objects = GDFSuezApplication.getAppInstance().getObjects();
-		StringBuilder listing = new StringBuilder();
-		for (ElectricObject object : objects) {
-			listing.append(object.toString() + "\n");
-		}
-		tvlisting.setText(listing.toString());
-		int e = GDFSuezApplication.getAppInstance().getEstimatedConsumption();
-		int r = GDFSuezApplication.getAppInstance().getRealTimeConsumption();
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
 
-		estimationtextview.setText("" + e);
-		realtextview.setText("" + r);
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
 	}
 
 }

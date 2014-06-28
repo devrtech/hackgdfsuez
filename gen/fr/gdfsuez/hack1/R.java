@@ -49,32 +49,33 @@ public final class R {
         public static final int picture_item=0x7f020003;
     }
     public static final class id {
-        public static final int action_close=0x7f09000e;
-        public static final int action_open=0x7f09000d;
-        public static final int action_settings=0x7f09000f;
+        public static final int action_close=0x7f090010;
+        public static final int action_open=0x7f09000f;
+        public static final int action_settings=0x7f090011;
         public static final int container=0x7f090000;
         public static final int drawer_layout=0x7f090004;
-        public static final int list_objects=0x7f090007;
+        public static final int list_objects=0x7f090009;
         public static final int menu_left=0x7f090005;
         public static final int surface_camera=0x7f090006;
-        public static final int text_estimated=0x7f09000b;
+        public static final int text_average=0x7f090008;
+        public static final int text_equipment=0x7f090007;
+        public static final int text_estimated=0x7f09000d;
         public static final int text_estimation=0x7f090002;
         public static final int text_listing=0x7f090001;
-        public static final int text_model=0x7f090009;
-        public static final int text_name=0x7f090008;
+        public static final int text_model=0x7f09000b;
+        public static final int text_name=0x7f09000a;
         public static final int text_real=0x7f090003;
-        public static final int text_status=0x7f09000c;
-        public static final int text_theorical=0x7f09000a;
+        public static final int text_status=0x7f09000e;
+        public static final int text_theorical=0x7f09000c;
     }
     public static final class layout {
         public static final int activity_home=0x7f030000;
         public static final int activity_listing=0x7f030001;
         public static final int activity_main=0x7f030002;
-        public static final int activity_scan=0x7f030003;
-        public static final int activity_tracking=0x7f030004;
-        public static final int fragment_home=0x7f030005;
-        public static final int fragment_listing=0x7f030006;
-        public static final int view_object_item=0x7f030007;
+        public static final int activity_tracking=0x7f030003;
+        public static final int fragment_home=0x7f030004;
+        public static final int fragment_listing=0x7f030005;
+        public static final int view_object_item=0x7f030006;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -84,19 +85,20 @@ public final class R {
         public static final int activity_listing=0x7f060003;
         public static final int activity_tracking=0x7f060004;
         public static final int app_name=0x7f060000;
-        public static final int consumption_estimation=0x7f060005;
-        public static final int consumption_realtime=0x7f060006;
-        public static final int consumption_unity=0x7f060007;
+        public static final int consumption_average=0x7f060005;
+        public static final int consumption_estimation=0x7f060006;
+        public static final int consumption_realtime=0x7f060007;
+        public static final int consumption_unity=0x7f060008;
         public static final int hello_world=0x7f060001;
-        public static final int menu=0x7f060008;
-        public static final int menu_close=0x7f06000f;
-        public static final int menu_mesequipements=0x7f06000a;
-        public static final int menu_moncompte=0x7f06000d;
-        public static final int menu_monquartier=0x7f06000b;
-        public static final int menu_open=0x7f06000e;
-        public static final int menu_promo=0x7f06000c;
-        public static final int menu_scanner=0x7f060009;
-        public static final int scan=0x7f060010;
+        public static final int menu=0x7f060009;
+        public static final int menu_close=0x7f060010;
+        public static final int menu_mesequipements=0x7f06000b;
+        public static final int menu_moncompte=0x7f06000e;
+        public static final int menu_monquartier=0x7f06000c;
+        public static final int menu_open=0x7f06000f;
+        public static final int menu_promo=0x7f06000d;
+        public static final int menu_scanner=0x7f06000a;
+        public static final int scan=0x7f060011;
     }
     public static final class style {
         /** 
