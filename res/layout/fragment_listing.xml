@@ -4,35 +4,61 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout style="@style/layout.horizontal" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp" >
 
-        <LinearLayout style="@style/layout.vertical" android:layout_width="250dp" >
+        <TextView
+            style="@style/text"
+            android:text="@string/consumption_estimation"
+            android:textSize="16sp" />
 
-            <TextView
-                android:id="@+id/text_equipment"
-                style="@style/text" />
+        <TextView
+            android:id="@+id/text_equipment"
+            style="@style/text.price" />
 
-            <TextView
-                android:id="@+id/text_average"
-                style="@style/text" />
+        <TextView
+            style="@style/text"
+            android:text="@string/consumption_average"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_average"
+            style="@style/text.price" />
+
+        <TextView
+            android:id="@+id/text_date"
+            android:textSize="16sp"
+            style="@style/text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                style="@style/picture"
+                android:padding="10dp"
+                android:src="@drawable/icon_smiley" />
+
+            <SeekBar
+                android:id="@+id/list_row_gradient"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:padding="10dp"
+                android:progress="25"
+                android:progressDrawable="@drawable/progress"
+                android:thumb="@drawable/thumb" />
         </LinearLayout>
-
-        <Button
-            style="@style/button"
-            android:layout_margin="10dp"
-            android:onClick="onClickScanActivity"
-            android:padding="20dp"
-            android:text="@string/scan"
-            android:textColor="#FF0000"
-            android:textSize="25sp" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/list_objects"
         style="@style/layout" />
-
-    <TextView
-        android:id="@+id/text_listing"
-        style="@style/text" />
 
 </LinearLayout>

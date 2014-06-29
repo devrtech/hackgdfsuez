@@ -35,7 +35,7 @@ public class ObjectAdapter extends ArrayAdapter<ElectricObject> {
 		nametv.setText(object.getName());
 		brandmodeltv.setText(object.getBrand() + "-" + object.getModel());
 
-		theoricaltv.setText(getContext().getResources().getString(R.string.consumption,
+		theoricaltv.setText(getContext().getResources().getString(R.string.consumption_w,
 				object.getTheoricalConsumption()));
 
 		estimatedtv.setText("" + object.getEstimatedConsumption());

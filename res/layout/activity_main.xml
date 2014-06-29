@@ -22,7 +22,7 @@
 
             <ImageView
                 style="@style/icon"
-                android:src="@drawable/icon_voisinage" />
+                android:src="@drawable/icon_scan" />
 
             <TextView
                 style="@style/text.menu"
@@ -35,7 +35,7 @@
 
             <ImageView
                 style="@style/icon"
-                android:src="@drawable/icon_voisinage" />
+                android:src="@drawable/icon_equip" />
 
             <TextView
                 style="@style/text.menu"
@@ -61,7 +61,7 @@
 
             <ImageView
                 style="@style/icon"
-                android:src="@drawable/icon_voisinage" />
+                android:src="@drawable/icon_promo" />
 
             <TextView
                 style="@style/text.menu"
@@ -74,7 +74,7 @@
 
             <ImageView
                 style="@style/icon"
-                android:src="@drawable/icon_voisinage" />
+                android:src="@drawable/icon_moncompte" />
 
             <TextView
                 style="@style/text.menu"

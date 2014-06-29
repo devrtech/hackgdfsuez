@@ -7,11 +7,15 @@ import fr.gdfsuez.hack1.GDFSuezApplication;
 import fr.gdfsuez.hack1.R;
 import fr.gdfsuez.hack1.adapters.ObjectAdapter;
 import fr.gdfsuez.hack1.model.ElectricObject;
+import fr.gdfsuez.hack1.view.ScanButton;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -40,7 +44,17 @@ public class ListingObjectsFragment extends Fragment {
 		int r = GDFSuezApplication.getAppInstance().getRealTimeConsumption();
 
 		// estimationtextview.setText("" + e);
-		av_textview.setText(getResources().getString(R.string.consumption_average, r));
+		av_textview.setText(getResources().getString(R.string.consumption_wh, r));
+
+		// Button button = new Button(getActivity(), null, R.style.button);
+		// button.setText("ReScan");
+
+		ScanButton button = new ScanButton(getActivity(), null);
+		// button.setLayoutParams(new ListView.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+		// LinearLayout.LayoutParams.WRAP_CONTENT));
+		button.setGravity(Gravity.CENTER);
+
+		objectslistview.addFooterView(button);
 
 		return rootView;
 	}
@@ -57,7 +71,7 @@ public class ListingObjectsFragment extends Fragment {
 		Random random = new Random();
 		int r = Math.abs(random.nextInt() % 110);
 		c = (int) ((float) c * ((float) r / 1000F));
-		eq_textview.setText(getResources().getString(R.string.consumption_estimation, c));
+		eq_textview.setText(getResources().getString(R.string.consumption_wh, c));
 	}
 
 }
