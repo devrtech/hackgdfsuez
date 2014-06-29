@@ -1,5 +1,8 @@
 package fr.gdfsuez.hack1.activity;
 
+import java.util.Calendar;
+import java.util.Date;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -33,6 +36,7 @@ public class ScanObjectsActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		GDFSuezApplication.getAppInstance().setScanDate(Calendar.getInstance().getTime());
 		// Définition du background de l'actionbar
 		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_background));
 		// Création de la View

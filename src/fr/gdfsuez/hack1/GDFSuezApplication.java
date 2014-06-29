@@ -1,6 +1,8 @@
 package fr.gdfsuez.hack1;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
@@ -36,6 +38,8 @@ public class GDFSuezApplication extends Application {
 	private int estimatedconsumption;
 	private int averageconsumption;
 
+	private Date scandate;
+
 	/**
 	 * Constructeur
 	 */
@@ -43,6 +47,14 @@ public class GDFSuezApplication extends Application {
 		super();
 		APP_INSTANCE = this;
 		generateDatas();
+	}
+
+	public Date getScanDate() {
+		return scandate;
+	}
+
+	public void setScanDate(Date scandate) {
+		this.scandate = scandate;
 	}
 
 	static final public GDFSuezApplication getAppInstance() {
@@ -66,6 +78,8 @@ public class GDFSuezApplication extends Application {
 	}
 
 	private void generateDatas() {
+		scandate = Calendar.getInstance().getTime();
+
 		Random random = new Random();
 		objects = new ArrayList<ElectricObject>();
 

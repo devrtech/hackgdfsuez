@@ -21,6 +21,7 @@
     <string name="menu_open">Ouvrir Menu</string>
     <string name="menu_close">Fermer Menu</string>
     <string name="scan">Scan</string>
+    <string name="scan_lastdate">Scan </string>
     <string name="fragment_mon_quartier">Mon quartier énergétique</string>
     <string name="fragment_mon_compte">Mon Compte GDF-Suez</string>
     <string name="fragment_promo">Mes Deals</string>
