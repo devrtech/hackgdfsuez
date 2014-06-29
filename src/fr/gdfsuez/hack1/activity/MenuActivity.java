@@ -31,7 +31,7 @@ abstract public class MenuActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// Définition du background de l'actionbar
+		// Dï¿½finition du background de l'actionbar
 		getActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_background));
 		defineLayout();
 		leftview = (View) findViewById(R.id.menu_left);
@@ -39,13 +39,13 @@ abstract public class MenuActivity extends Activity {
 		menutoggle = new ActionBarDrawerToggle(this, menulayout, R.drawable.ic_launcher, R.string.menu_open,
 				R.string.menu_close) {
 
-			// Exécutée à la fermeture du menu
+			// Exï¿½cutï¿½e ï¿½ la fermeture du menu
 			public void onDrawerClosed(View view) {
 				getActionBar().setTitle(R.string.app_name);
 				invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
 			}
 
-			// Exécutée à l’ouverture du menu
+			// Exï¿½cutï¿½e ï¿½ lï¿½ouverture du menu
 			public void onDrawerOpened(View drawerView) {
 				getActionBar().setTitle(R.string.menu);
 				invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
@@ -90,9 +90,11 @@ abstract public class MenuActivity extends Activity {
 			return true;
 		}
 		if (id == R.id.action_open) {
+			menulayout.openDrawer(leftview);
 			return true;
 		}
 		if (id == R.id.action_close) {
+			menulayout.closeDrawer(leftview);
 			return true;
 		}
 
@@ -127,11 +129,14 @@ abstract public class MenuActivity extends Activity {
 		ListingObjectsFragment fragment = new ListingObjectsFragment();
 		ft.replace(R.id.container, fragment);
 		ft.commit();
+		menulayout.closeDrawer(leftview);
 	}
 
 	public void onClickCameraActivity(View view) {
+		menulayout.closeDrawer(leftview);
 		Intent intent = new Intent(this, ScanObjectsActivity.class);
 		startActivityForResult(intent, ScanObjectsActivity.SCAN_COMPLETED_REQUESTCODE);
+
 	}
 	
 	public void onClickMonQuartier(View view) {

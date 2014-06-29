@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
+import fr.gdfsuez.hack1.model.ElectricObject;
 import fr.gdfsuez.hack1.view.CoupledCameraSizes;
 import android.app.Activity;
 import android.app.Application;
@@ -72,25 +73,38 @@ public class GDFSuezApplication extends Application {
 		realtimeconsumption = Math.abs((random.nextInt() % 700) + 100);
 		estimatedconsumption = (int) ((float) realtimeconsumption * 1.1F);
 
-		boolean b1 = random.nextBoolean();
-		objects.add(new ElectricObject("Ordinateur", "Acer Aspire Z3", 500,
-				(b1) ? random.nextInt() % 500 : 0, b1));
+		// boolean b1 = random.nextBoolean();
+		// objects.add(new ElectricObject("Ordinateur", "Acer", "Aspire Z3", "C", 500,
+		// (b1) ? random.nextInt() % 500 : 0, b1));
 
 		boolean b2 = random.nextBoolean();
-		objects.add(new ElectricObject("Lampe", "Ikea BASISK Rail plafond", 60, (b2) ? 60 : 0, b2));
+		objects.add(new ElectricObject("Aspirateur", "Tornado", "TO1820", "C", 1800, (b2) ? 1800 : 0, b2));
 
-		boolean b3 = random.nextBoolean();
-		objects.add(new ElectricObject("Lampadaire", "Ikea ALÄNG", 90, (b3) ? 90 : 0, b3));
+		// boolean b3 = random.nextBoolean();
+		// objects.add(new ElectricObject("Lampe", "Ikea", "BASISK Rail plafond", "A", 60, (b3) ? 60 : 0,
+		// b3));
 
 		boolean b4 = random.nextBoolean();
-		objects.add(new ElectricObject("Téléviseur", "Sony Bravia X9500B", 200, (b4) ? 200 : 8, b4 ? 1 : 2));
+		objects.add(new ElectricObject("Téléviseur", "Sony", "Bravia X9500B", "B", 550, (b4) ? (random
+				.nextInt() % 250 + 300) : 1, b4 ? 1 : 2));
 
 		boolean b5 = random.nextBoolean();
-		objects.add(new ElectricObject("Lave-Linge", "Whirlpool AWG712D", 800, (b5) ? 800 : 0, b5));
-
+		objects.add(new ElectricObject("Lampadaire", "Ikea", "ALÄNG", "B", 90, (b5) ? 90 : 0, b5));
+		
 		boolean b6 = random.nextBoolean();
-		objects.add(new ElectricObject("Lampe", "Ikea HEKTAR Suspension", 120, (b6) ? 120 : 5, b6 ? 1 : 2));
+		objects.add(new ElectricObject("Réfrigérateur", "Indesit", "BIAA 13", "A+", 32, (b6) ? 32 : 0, b6));
 
+		boolean b7 = random.nextBoolean();
+		objects.add(new ElectricObject("Lave-Linge", "Whirlpool", "AWG712D", "A+", 2100, (b7) ? (random
+				.nextInt() % 2000) : 0, b7));
+
+		boolean b8 = random.nextBoolean();
+		objects.add(new ElectricObject("Lampe", "Ikea", "HEKTAR Suspension", "D", 120, (b8) ? 120 : 5, b8 ? 1
+				: 2));
+
+
+
+		// aspirteur frigo lave linge micro-onde tv
 	}
 
 	/* *** METHODES STATIQUES D'UTILISATION DE CAMERA *** */

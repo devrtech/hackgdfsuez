@@ -3,10 +3,10 @@ package fr.gdfsuez.hack1.fragment;
 import java.util.List;
 import java.util.Random;
 
-import fr.gdfsuez.hack1.ElectricObject;
 import fr.gdfsuez.hack1.GDFSuezApplication;
 import fr.gdfsuez.hack1.R;
-import fr.gdfsuez.hack1.view.ObjectAdapter;
+import fr.gdfsuez.hack1.adapters.ObjectAdapter;
+import fr.gdfsuez.hack1.model.ElectricObject;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;

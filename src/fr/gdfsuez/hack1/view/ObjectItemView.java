@@ -1,7 +1,7 @@
 package fr.gdfsuez.hack1.view;
 
-import fr.gdfsuez.hack1.ElectricObject;
 import fr.gdfsuez.hack1.R;
+import fr.gdfsuez.hack1.model.ElectricObject;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;

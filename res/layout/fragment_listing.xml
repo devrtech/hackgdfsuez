@@ -4,13 +4,28 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/text_equipment"
-        style="@style/text.display" />
+    <LinearLayout style="@style/layout.horizontal" >
 
-    <TextView
-        android:id="@+id/text_average"
-        style="@style/text.display" />
+        <LinearLayout style="@style/layout.vertical" android:layout_width="250dp" >
+
+            <TextView
+                android:id="@+id/text_equipment"
+                style="@style/text" />
+
+            <TextView
+                android:id="@+id/text_average"
+                style="@style/text" />
+        </LinearLayout>
+
+        <Button
+            style="@style/button"
+            android:layout_margin="10dp"
+            android:onClick="onClickScanActivity"
+            android:padding="20dp"
+            android:text="@string/scan"
+            android:textColor="#FF0000"
+            android:textSize="25sp" />
+    </LinearLayout>
 
     <ListView
         android:id="@+id/list_objects"

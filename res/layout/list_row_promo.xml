@@ -12,11 +12,9 @@
         android:orientation="vertical" >
 
         <ImageView
+             style="@style/picture"
             android:id="@+id/list_row_image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            android:scaleType="fitXY"
             android:src="@drawable/tv" />
 
         <TextView

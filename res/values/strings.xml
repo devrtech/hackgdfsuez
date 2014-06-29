@@ -6,6 +6,7 @@
     <string name="action_settings">Settings</string>
     <string name="activity_listing">Liste des objets scannés</string>
     <string name="activity_tracking">Scan des objects</string>
+    <string name="consumption">%1$d Wh</string>
     <string name="consumption_average">Consommation moyenne : %1$d Wh</string>
     <string name="consumption_estimation">Consommation moyenne appareils : %1$d Wh</string>
     <string name="consumption_realtime">Consommation Temps réel %1$d Wh</string>
@@ -19,9 +20,8 @@
     <string name="menu_open">Ouvrir Menu</string>
     <string name="menu_close">Fermer Menu</string>
     <string name="scan">Scan</string>
-         <string name="fragment_mon_quartier">Mon quartier énergétique</string>
-     <string name="fragment_mon_compte">Mon Compte GDF-Suez</string>
-     <string name="fragment_promo">Mes Deals</string>
-    
+    <string name="fragment_mon_quartier">Mon quartier énergétique</string>
+    <string name="fragment_mon_compte">Mon Compte GDF-Suez</string>
+    <string name="fragment_promo">Mes Deals</string>
 
 </resources>
