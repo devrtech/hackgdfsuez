@@ -90,7 +90,7 @@ public class GDFSuezApplication extends Application {
 
 		boolean b5 = random.nextBoolean();
 		objects.add(new ElectricObject("Lampadaire", "Ikea", "ALÄNG", "B", 90, (b5) ? 90 : 0, b5));
-		
+
 		boolean b6 = random.nextBoolean();
 		objects.add(new ElectricObject("Réfrigérateur", "Indesit", "BIAA 13", "A+", 32, (b6) ? 32 : 0, b6));
 
@@ -102,9 +102,9 @@ public class GDFSuezApplication extends Application {
 		objects.add(new ElectricObject("Lampe", "Ikea", "HEKTAR Suspension", "D", 120, (b8) ? 120 : 5, b8 ? 1
 				: 2));
 
+		boolean b9 = random.nextBoolean();
+		objects.add(new ElectricObject("Micro-ondes", "Proline", "KE20W", "D", 700, (b9) ? 700 : 5, b9));
 
-
-		// aspirteur frigo lave linge micro-onde tv
 	}
 
 	/* *** METHODES STATIQUES D'UTILISATION DE CAMERA *** */
